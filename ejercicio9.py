@@ -1,20 +1,17 @@
+from tabulate import tabulate
 diccionario = ['avion','tren','auto','camion']
-palabra1 = diccionario[0]
-palabra2 = diccionario[1]
-palabra3 = diccionario[2]
-palabra4 = diccionario[3]
-resultado =[]
+orden = sorted(diccionario)
 
-letra = input("Escriba la letra que desea:")
-if palabra1[0] == letra:
-  resultado.append(palabra1)
-elif palabra2[0] == letra:
-  resultado.append(palabra2)
-elif palabra3[0] == letra:
-  resultado.append(palabra3)
-elif palabra4[0] == letra:
-  resultado.append(palabra4)
-else:
-  resultado.append("No hay palabras que empiecen por esa letra")
-print(resultado)
-  
+indice1 = orden.index(diccionario[0])
+indice2 = orden.index(diccionario[1])
+indice3 = orden.index(diccionario[2])
+indice4 = orden.index(diccionario[3])
+
+posterior1 = indice1 + 2
+posterior2 = indice2 + 2
+posterior3 = indice3 + 2
+posterior4 = indice4 + 2
+
+resultado = [[diccionario[0], indice1, posterior1], [diccionario[1], indice2, posterior2], [diccionario[2], indice3, posterior3], [diccionario[3], indice4, posterior4]]
+
+print(tabulate(resultado, headers=["Diccionario", "anterior", "siguiente"]))
