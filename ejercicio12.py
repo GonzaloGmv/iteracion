@@ -1,6 +1,5 @@
 from math import sqrt
-def cuadradosperfectos(): 
-  n=int(input("introduzca un numero entero: "))
+def cuadradosperfectos(n): 
   r=[]
   s=[]
   for i in range(n+1):
