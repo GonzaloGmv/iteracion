@@ -1,5 +1,5 @@
-import tabulate
 def descomposicion(): 
+  from tabulate import tabulate
   separador = str(input("¿Que separador quieres usar?: "))
   cadena = str(input("¿Que texto deseas analizar?: "))
   cade = cadena.split(separador)
