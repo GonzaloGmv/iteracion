@@ -1,5 +1,6 @@
-from math imprt sqrt
-def cuadradosperfectos(n): 
+from math import sqrt
+def cuadradosperfectos(): 
+  n=int(input("introduzca un numero entero: "))
   r=[]
   s=[]
   for i in range(n+1):
@@ -10,5 +11,3 @@ def cuadradosperfectos(n):
   print("los cuadrados perfectos son: " .format(n))
   for x in r:
     print(x)
-if __name__==__main__:
-  n=int(input("introduzca un numero entero: "))
